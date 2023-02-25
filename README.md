@@ -2,15 +2,25 @@
 
 A new Flutter project.
 
-## Getting Started
+## Version 18 Add Ads 
+1.build gradle (Project) Modification of Kotline version
+2.Manifest.xml    
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+3.Stack of ads on the Grid or Web View Low hierarchy as it ia poaaiple.
+4.Build Gradle (App) We Add :
+	dependencies {
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.google.android.gms:play-services-ads:21.5.0'
+    implementation 'com.android.support:multidex:1.0.3'
+			}
+And        defaultConfig {
+			multiDexEnabled true
+			minSdkVersion 19}
 
-This project is a starting point for a Flutter application.
+5.Reinstall App in Device
+6. Flutter Clean
+7. Flutter Clear Cashe
+8.Remove Pubesc.lock
+9.Invalidate Cashe and Restart
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
