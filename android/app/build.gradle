@@ -43,10 +43,12 @@ android {
         applicationId "com.featheredteam.healthysex"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
-        minSdkVersion flutter.minSdkVersion
+        minSdkVersion 19
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        multiDexEnabled true
+
     }
 
     signingConfigs {
@@ -66,4 +68,9 @@ android {
 
 flutter {
     source '../..'
+}
+dependencies {
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.google.android.gms:play-services-ads:21.5.0'
+    implementation 'com.android.support:multidex:1.0.3'
 }
